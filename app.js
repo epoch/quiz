@@ -26,10 +26,8 @@
 
   $(".squares_container").click(function(event){
 
-      // var $id = $(event.target).attr('data-id');
-      // $('[data-id=$id]').css("background-color", green);
-
-      $(event.target).css("background-color", "green");
+      $colour = $('.brush_box').css("background-color");
+      $(event.target).css("background-color", $colour);
 
 
   });
