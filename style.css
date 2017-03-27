@@ -1,0 +1,14 @@
+.brush-box, .swatch {
+  width: 50px;
+  height: 30px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
+
+.square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0px;
+  border: 1px solid black;
+}
