@@ -10,6 +10,7 @@ Use the starter code and commit each step of the exercise.
 
 ### Commit 1
 
+
 * When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field.
 * Use jQuery to select the element and add an event listener
 
@@ -30,6 +31,7 @@ Use the starter code and commit each step of the exercise.
   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
 
 ### Commit 5
+
 
 * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
