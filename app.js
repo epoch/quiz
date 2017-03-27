@@ -3,10 +3,22 @@
 var brushBox = $('.brush');
 var colorInput = $('.input-color');
 var setColorBtn = $('.set-color');
+backgroundColor = colorInput.val().toLowerCase();
+function createSwatch(){
+
+
+  var colorSwatch = $( '<div>', {
+    'class': 'colorpalette',
+    'background-color': backgroundColor }
+  );
+  var colorBox = $('.color-box');
+  colorBox.append(colorSwatch);
+}
 
 function setBackgroundColor(){
   backgroundColor = colorInput.val().toLowerCase();
   brushBox.css("background", backgroundColor);
+  createSwatch();
 }
 
 // Click to change set background-color = input text
