@@ -39,8 +39,9 @@ for (var i = 1; i <= 20; i++) {
 
 function getSquare(event){
   $square = $(event.target);
+  backgroundColor = colorInput.val().toLowerCase();
   if ( $square.is( "div" ) ) {
-    $square.css( 'background-color', 'green');
+    $square.css( 'background-color', backgroundColor);
   }
 }
 
