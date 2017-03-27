@@ -17,13 +17,17 @@ $('input').keypress(function(event){
   }
 });
 
-function squareDivs(){
+function squareDivs(num){
   var $div = $('<div>');
-  return $div.addClass("square");
+  return $div.addClass("square").text(num);
 }
 function makeDiv(){
   for(var i=0; i<=20;i++){
-    $('body').append(squareDivs());
+    $('body').append(squareDivs(i));
   }
 }
 makeDiv();
+
+$('div.square').on('click',function(event){
+  event.target.style["background-color"] = "green";
+});
