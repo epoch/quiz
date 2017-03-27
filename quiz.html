@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+  .brush {
+    height: 200px;
+    width: 200px;
+    border:1px solid black;
+    margin-top: 30px;
+  }
+  </style>
+</head>
+<body>
+  <label for="">Please enter color</label>
+  <input class="Color" type="text">
+  <button class="changeButton" >Change brush color!</button>
+  <div class="brush"></div>
+  <script>
+  $( ".changeButton" ).click(function(event) {
+  event.preventDefault()
+  var userColor = $('.Color').val();
+  console.log(userColor)
+  $('.brush').css( "background-color",userColor);
+  });
+  </script>
+</body>
+</html>
