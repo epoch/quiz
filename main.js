@@ -1,31 +1,29 @@
 console.log('quiz');
 
+
 var count = 0;
+var brushColor;
 
 function color() {
   if(count === 3){
     count = 0;
   }
   count++;
+  var newColor = $('.color').val();
   if(count === 1){
-    var newColor = $('.color').val();
-    $('.box').css('backgroundColor', newColor);
     $('.one').css('backgroundColor', newColor);
   } else if (count === 2) {
     var newColor = $('.color').val();
-    $('.box').css('backgroundColor', newColor);
     $('.two').css('backgroundColor', newColor);
   } else if (count === 3) {
     var newColor = $('.color').val();
-    $('.box').css('backgroundColor', newColor);
     $('.three').css('backgroundColor', newColor);
   }
 }
 
 
 $('.swatch').on('click', function(event){
-  squareColor = $(event.target).css('backgroundColor');
-  $('.box').css('background-color', squareColor);
+  brushColor = $(event.target).css('backgroundColor');
 })
 
 $('.setColor').on('click', function(event){
@@ -47,9 +45,9 @@ $(function(){
       singleBox = $('<div class="square">');
       $body.append(singleBox);
       $('.square').on('mouseover', function(event){
-        var newColor = $('.color').val();
+        var newColor = brushColor;
         $target = $(event.target);
-        $target.css('backgroundColor', newColor);
+        $target.css('backgroundColor', brushColor);
         }
       );
     }

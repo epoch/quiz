@@ -6,7 +6,7 @@ button {
   display:block;
 }
 
-.box, .swatch{
+.swatch{
   display: block;
   border: 1px solid black;
   width: 40px;
