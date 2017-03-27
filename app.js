@@ -24,10 +24,12 @@
 
 
 
-  $(".squares_container").click(function(event){
+  $(".squares_container").mouseover(function(event){
 
+      if ($(event.target).hasClass('square')){
       $colour = $('.brush_box').css("background-color");
       $(event.target).css("background-color", $colour);
+    }
 
 
   });
