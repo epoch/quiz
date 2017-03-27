@@ -8,3 +8,9 @@ var setBrushBoxColor = function() {
 $('button').click(function() {
   setBrushBoxColor();
 });
+
+$('input').keydown(function(e) {
+  if (e.which === 13) {
+    setBrushBoxColor();
+  }
+});
