@@ -26,8 +26,8 @@ function addDiv(){
   var square = $( '<div>', { 'class': 'square'} );
   var squareNumber = $( '<h2>', { 'class': 'square-number'} );
 
-  squareNumber.html( i );
-  square.append(squareNumber);
+  // squareNumber.html( i );
+  // square.append(squareNumber);
   $('body').append(square);
   // console.log(i);
 }
@@ -45,4 +45,4 @@ function getSquare(event){
   }
 }
 
-$('body').on('click', 'div', getSquare );
+$('body').on('mouseover', 'div', getSquare );
