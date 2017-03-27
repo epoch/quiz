@@ -59,7 +59,8 @@
     console.log(event.target.className);
     if (event.target.className=== "square"){
       event.preventDefault()
-      $(event.target).css( "background-color","green");
+      var brushColor = $('.brush').css('background-color');
+      $(event.target).css("background-color",brushColor);
     }
   });
   </script>
