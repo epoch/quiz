@@ -9,6 +9,7 @@ function setBackgroundColor(){
   brushBox.css("background", backgroundColor);
 }
 
+// Click to change set background-color = input text
 setColorBtn.on('click', setBackgroundColor);
 
 // On key up for 'Enter'
@@ -18,3 +19,20 @@ colorInput.on('keyup', function(e) {
    setBackgroundColor();
   }
 });
+
+
+//// Create 20 square boxes
+function addDiv(){
+  var square = $( '<div>', { 'class': 'square'} );
+  var squareNumber = $( '<h2>', { 'class': 'square-number'} );
+
+  squareNumber.html( i );
+  square.append(squareNumber);
+  $('body').append(square);
+  console.log(i);
+}
+
+
+for (var i = 1; i <= 20; i++) {
+  addDiv();
+}
