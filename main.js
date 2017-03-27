@@ -1,16 +1,42 @@
 console.log('quiz');
 
+var count = 0;
+
+function color() {
+  if(count === 3){
+    count = 0;
+  }
+  count++;
+  if(count === 1){
+    var newColor = $('.color').val();
+    $('.box').css('backgroundColor', newColor);
+    $('.one').css('backgroundColor', newColor);
+  } else if (count === 2) {
+    var newColor = $('.color').val();
+    $('.box').css('backgroundColor', newColor);
+    $('.two').css('backgroundColor', newColor);
+  } else if (count === 3) {
+    var newColor = $('.color').val();
+    $('.box').css('backgroundColor', newColor);
+    $('.three').css('backgroundColor', newColor);
+  }
+}
+
+
+$('.swatch').on('click', function(event){
+  squareColor = $(event.target).css('backgroundColor');
+  $('.box').css('background-color', squareColor);
+})
+
 $('.setColor').on('click', function(event){
   event.preventDefault();
-  var newColor = $('.color').val();
-  $('.box').css('backgroundColor', newColor);
-}
-);
+  color();
+});
 
 $('.color').keypress(function(event){
   var newColor = $('.color').val();
   if(event.which === 13) {
-    $('.box').css('backgroundColor', newColor);
+    color();
     }
   }
 );
