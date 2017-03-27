@@ -24,12 +24,12 @@
 
 
 
-  // $(.square).click(function(event){
-  //
-  //     // var $id = $(event.target).attr('data-id');
-  //     // $('[data-id=$id]').css("background-color", green);
-  //
-  //     $(event.target).css("background-color", green);
-  //
-  //
-  // });
+  $(".squares_container").click(function(event){
+
+      // var $id = $(event.target).attr('data-id');
+      // $('[data-id=$id]').css("background-color", green);
+
+      $(event.target).css("background-color", "green");
+
+
+  });
