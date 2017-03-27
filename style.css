@@ -1,0 +1,30 @@
+div {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.brush {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-palette {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.square-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  display: inline-block;
+}
