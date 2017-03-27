@@ -6,8 +6,9 @@
 }
 
 .square{
-  width: 20px;
-  height: 20px;
+  width: 70px;
+  height: 70px;
   border: 1px solid black;
-  display: inline;
+  display:inline-block;
+  color: mistyrose;
 }
