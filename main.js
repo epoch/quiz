@@ -6,3 +6,11 @@ $('.setColor').on('click', function(event){
   $('.box').css('backgroundColor', newColor);
 }
 );
+
+$('.color').keypress(function(event){
+  var newColor = $('.color').val();
+  if(event.which === 13) {
+    $('.box').css('backgroundColor', newColor);
+    }
+  }
+);
