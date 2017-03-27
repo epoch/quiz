@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+  .brush {
+    height: 200px;
+    width: 200px;
+    border:1px solid black;
+    margin-top: 30px;
+  }
+
+  .square{
+    height: 10px;
+    width: 10px;
+    display:inline-block;
+    border:1px solid black;
+    margin:0;
+  }
+  .colors_used{
+    height: 50px;
+    width: 200px;
+    border:1px solid black;
+  }
+  .colors_used > div{
+    height:50px;
+    width:80px;
+    border:1px solid black;
+  }
+  </style>
+</head>
+<body>
+  <h4>Most recently used colors: </h4>
+  <label for="">Please enter color</label>
+  <input class="Color" type="text">
+  <button class="changeButton" >Change brush color!</button>
+  <div class="brush"></div>
+  <div class="colors_used">
+    <div class="colors_used_1"></div>
+    <div class="colors_used_2"></div>
+    <div class="colors_used_3"></div>
+  </div>
+
+  <script>
+  $('.changeButton').on('click', function(event) {
+    changeColor(event);
+  });
+
+  $('body').keydown(function(event){
+    var keyCode = (event.keyCode ? event.keyCode : event.which);
+    if (keyCode == 13) {
+      event.preventDefault()
+      changeColor(event);
+    }
+  });
+
+  function changeColor(event){
+    event.preventDefault()
+    var userColor = $('.Color').val();
+    console.log(userColor)
+    $('.brush').css( "background-color",userColor);
+  }
+
+  for(var count = 0 ; count < 20 ; count ++){
+    var $square = $('<div>',{"class":"square"});
+    $('body').append($square);
+  }
+
+  $('body').on('mouseover', function(event){
+    console.log(event.target.className);
+    if (event.target.className === "square"){
+      event.preventDefault()
+      var brushColor = $('.brush').css('background-color');
+      $(event.target).css("background-color",brushColor);
+    }
+  });
+
+  $(".colors_used").on('click', function(event){
+    
+    $('.brush').css( "background-color",userColor);
+  });
+  var recentColorCount = 1;
+
+
+  </script>
+</body>
+</html>
