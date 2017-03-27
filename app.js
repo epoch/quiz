@@ -12,6 +12,7 @@ $setColorBtn.on('click', function(){
   for (i=0; i<20; i++){
     var newElement = document.createElement('div');
     newElement.setAttribute('class', 'square');
+    newElement.setAttribute('id', i)
     document.querySelector('body').appendChild(newElement);
   };
 
@@ -22,6 +23,11 @@ $inputColor.on('keypress', function(){
   input = document.querySelector('.input').value;
   brush = document.querySelector('.brush');
   brush.style.backgroundColor = input;
+});
+
+$square = $('body');
+$square.on('click', function(){
+
 });
 
 
