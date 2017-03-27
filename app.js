@@ -1,6 +1,6 @@
 
 
-$(document).ready(function(){
+//$(document).ready(function(){
 
   $(".search").click(function(event){
 
@@ -15,12 +15,21 @@ $(document).ready(function(){
 
   });
 
+
   for(i=0; i<20; i++){
 
-    var $newSquare = $("<div>").addClass("square");
+    var $newSquare = $("<div>").addClass("square").attr('data-id', i);
     $newSquare.appendTo(".squares_container");
-
   }
 
 
- });
+
+  // $(.square).click(function(event){
+  //
+  //     // var $id = $(event.target).attr('data-id');
+  //     // $('[data-id=$id]').css("background-color", green);
+  //
+  //     $(event.target).css("background-color", green);
+  //
+  //
+  // });
