@@ -14,3 +14,11 @@ $('.color').keypress(function(event){
     }
   }
 );
+
+$(function(){
+  $body = $('body');
+    for (i = 0; i < 20; i++){
+      singleBox = $('<div class="square"><div>');
+      $body.append(singleBox);
+    }
+});
