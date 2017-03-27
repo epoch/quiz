@@ -24,12 +24,24 @@
   <button class="changeButton" >Change brush color!</button>
   <div class="brush"></div>
   <script>
-  $( ".changeButton" ).click(function(event) {
-  event.preventDefault()
-  var userColor = $('.Color').val();
-  console.log(userColor)
-  $('.brush').css( "background-color",userColor);
+  $('.changeButton').on('click', function(event) {
+    changeColor(event);
   });
+
+  $('body').keydown(function(event){
+    var keyCode = (event.keyCode ? event.keyCode : event.which);
+    if (keyCode == 13) {
+      event.preventDefault()
+      changeColor(event);
+    }
+  });
+
+  function changeColor(event){
+    event.preventDefault()
+    var userColor = $('.Color').val();
+    console.log(userColor)
+    $('.brush').css( "background-color",userColor);
+  }
   </script>
 </body>
 </html>
