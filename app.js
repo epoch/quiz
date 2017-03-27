@@ -29,10 +29,19 @@ function addDiv(){
   squareNumber.html( i );
   square.append(squareNumber);
   $('body').append(square);
-  console.log(i);
+  // console.log(i);
 }
-
 
 for (var i = 1; i <= 20; i++) {
   addDiv();
 }
+
+
+function getSquare(event){
+  $square = $(event.target);
+  if ( $square.is( "div" ) ) {
+    $square.css( 'background-color', 'green');
+  }
+}
+
+$('body').on('click', 'div', getSquare );
