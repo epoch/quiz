@@ -1,0 +1,11 @@
+.brush {
+  width: 239px;
+  height: 239px;
+  border: 1px solid black;
+}
+
+.square {
+  width: 139px;
+  height: 139px;
+  border: 1px solid black;
+}
