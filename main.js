@@ -20,7 +20,7 @@ $(function(){
     for (i = 0; i < 20; i++){
       singleBox = $('<div class="square">');
       $body.append(singleBox);
-      $('.square').on('click', function(event){
+      $('.square').on('mouseover', function(event){
         var newColor = $('.color').val();
         $target = $(event.target);
         $target.css('backgroundColor', newColor);
