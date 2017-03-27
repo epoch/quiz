@@ -29,6 +29,15 @@ for (var i = 0; i < 20; i++) {
   $body.append($square);
 }
 
+$body.on('click', function(event) {
+  // debugger
+  var $target = $(event.target)
+  if (event.target.className == 'square') {
+    $target.css('background-color', 'green');
+    // debugger
+  }
+})
+
 
 
 
