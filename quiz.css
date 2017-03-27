@@ -4,3 +4,10 @@
   border: 1px solid black;
   margin: 10px;
 }
+
+.square{
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  display: inline;
+}
