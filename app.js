@@ -33,7 +33,7 @@ $body.on('click', function(event) {
   // debugger
   var $target = $(event.target)
   if (event.target.className == 'square') {
-    $target.css('background-color', 'green');
+    $target.css('background-color', $brushColorInput.val());
     // debugger
   }
 })
