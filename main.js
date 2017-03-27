@@ -21,8 +21,9 @@ $(function(){
       singleBox = $('<div class="square">');
       $body.append(singleBox);
       $('.square').on('click', function(event){
+        var newColor = $('.color').val();
         $target = $(event.target);
-        $target.css('backgroundColor', 'green');
+        $target.css('backgroundColor', newColor);
         }
       );
     }
