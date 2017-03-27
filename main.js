@@ -1,9 +1,16 @@
 $(function() {
   console.log('main.js connected');
 
+  var $body = $('body');
+  var $brushBox = $('.brush-box')
+  var $colorInput = $('input');
+
+  var setColorOf = function($element, color) {
+    $element.css('background', color);
+  };
+
   var setBrushBoxColor = function() {
-    var color = $('input').val();
-    $('.brush-box').css('background', color);
+    setColorOf($brushBox, $colorInput.val());
   };
 
   $('button').click(function() {
@@ -16,13 +23,11 @@ $(function() {
     }
   });
 
-  var $body = $('body');
-
   for (var i = 0; i < 20; i++) {
     $body.append($('<div>').addClass('square'));
   }
 
   $body.on('click', '.square', function(e) {
-    $(e.target).css('background', 'green');
+    setColorOf($(e.target), $colorInput.val());
   });
 });
