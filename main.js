@@ -28,7 +28,7 @@ function makeDiv(){
 }
 makeDiv();
 
-$('div.square').on('click',function(event){
+$('div.square').hover(function(event){
   var $color = $('input').val()
   event.target.style["background-color"] = $color;
 });
