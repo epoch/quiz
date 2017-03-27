@@ -16,3 +16,14 @@ $('input').keypress(function(event){
     return;
   }
 });
+
+function squareDivs(){
+  var $div = $('<div>');
+  return $div.addClass("square");
+}
+function makeDiv(){
+  for(var i=0; i<=20;i++){
+    $('body').append(squareDivs());
+  }
+}
+makeDiv();
