@@ -9,3 +9,9 @@
   height: 139px;
   border: 1px solid black;
 }
+
+.squareStoredColor0, .squareStoredColor1, .squareStoredColor2 {
+  width: 130px;
+  height: 130px;
+  border: 1px solid grey;
+}

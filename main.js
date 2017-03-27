@@ -11,7 +11,6 @@ function storeColor(){
   }
 }
 
-
 $('.colorChange').click(function(){
   $('.brush').css('backgroundColor', $('.boxColor').val());
   storeColor()
@@ -44,4 +43,30 @@ $('.square').css({
   'width': '10px',
   'height': '10px',
   'margin': '0'
+})
+
+for (var i = 0; i < 3; i++){
+  var $box = $('<div>').attr({
+    "class": "squareStoredColor" + i,
+    "value": i
+  })
+  var $input = $('<input>').attr({
+    "value": i,
+    "type": "hidden",
+    "class": "colorInput"
+   })
+  $("body").append($box);
+  $($box).append($input)
+}
+
+$('.squareStoredColor0').click(function(){
+  $(this).css('backgroundColor', colorArr[0]);
+})
+
+$('.squareStoredColor1').click(function(){
+  $(this).css('backgroundColor', colorArr[1]);
+})
+
+$('.squareStoredColor2').click(function(){
+  $(this).css('backgroundColor', colorArr[2]);
 })
