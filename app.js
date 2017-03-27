@@ -16,3 +16,7 @@ var changeBrushColour = function(){
 for (var i = 0; i < 20; i++) {
   $('<div>').addClass('square').appendTo('body')
 }
+
+$( ".square" ).on( "click", function() {
+  $(this).css('background-color', 'green');
+});
