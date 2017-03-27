@@ -1,0 +1,17 @@
+.brush {
+  width: 239px;
+  height: 239px;
+  border: 1px solid black;
+}
+
+.square {
+  width: 139px;
+  height: 139px;
+  border: 1px solid black;
+}
+
+.squareStoredColor0, .squareStoredColor1, .squareStoredColor2 {
+  width: 130px;
+  height: 130px;
+  border: 1px solid grey;
+}
