@@ -18,7 +18,12 @@ $('.color').keypress(function(event){
 $(function(){
   $body = $('body');
     for (i = 0; i < 20; i++){
-      singleBox = $('<div class="square"><div>');
+      singleBox = $('<div class="square">');
       $body.append(singleBox);
+      $('.square').on('click', function(event){
+        $target = $(event.target);
+        $target.css('backgroundColor', 'green');
+        }
+      );
     }
 });
