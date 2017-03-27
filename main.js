@@ -27,7 +27,7 @@ $(function() {
     $body.append($('<div>').addClass('square'));
   }
 
-  $body.on('click', '.square', function(e) {
+  $body.on('mouseover', '.square', function(e) {
     setColorOf($(e.target), $colorInput.val());
   });
 });
