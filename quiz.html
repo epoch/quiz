@@ -16,6 +16,13 @@
     border:1px solid black;
     margin-top: 30px;
   }
+
+  .square {
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    border:1px solid black;
+  }
   </style>
 </head>
 <body>
@@ -47,6 +54,14 @@
     var $square = $('<div>',{"class":"square"});
     $('body').append($square);
   }
+
+  $('body').on('click', function(event){
+    console.log(event.target.className);
+    if (event.target.className=== "square"){
+      event.preventDefault()
+      $(event.target).css( "background-color","green");
+    }
+  });
   </script>
 </body>
 </html>
