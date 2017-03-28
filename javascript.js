@@ -20,12 +20,15 @@ $('#color').keypress(function(e){
 $('.body').ready(function () {
     var $newDiv = $('<div class="square"/>');
     for (var i = 1; i <= 20; i++) {
-        $newDiv = $('<div class="ball" />').text(i);
+        $newDiv = $('<div class="square" />').text(i);
         $('body').append($newDiv);
     }
 });
 
+$square = $('.square');
 $('.body').on('click', function(event){
-  event.preventDefault();
-  $(event.target).css("background-color", "green")
+  // if (event.target == $square)
+  {
+    $(event.target).css("background-color", $color_choice)
+  }
 });
