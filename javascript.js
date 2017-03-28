@@ -31,3 +31,5 @@ $('.body').on('mouseover', function(event){
     ($(event.target).css("background-color", $color_choice));
   }
 });
+
+// Commit 7: I understand the assigning and grabbing CSS value aspect of this exercise and will complete it i the morning... too much mulit-tasking tonight

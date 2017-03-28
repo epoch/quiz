@@ -11,5 +11,14 @@
   background-color: white;
 }
 .square :hover {
-  
+
+}
+
+.swatch {
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+  display: block;
+  padding: 3px 3px 0px 3px;
+  border: 1px solid black;
 }
