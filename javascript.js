@@ -19,8 +19,8 @@ $('#color').keypress(function(e){
 
 $('.body').ready(function () {
     var $newDiv = $('<div class="square"/>');
-    for (var i = 0; i <= 20; i++) {
-        $newDiv = $('<div class="ball" />').text(i);
+    for (var i = 1; i <= 20; i++) {
+        $newDiv = $('<div class="ball" />').;
         $('body').append($newDiv);
     }
 });

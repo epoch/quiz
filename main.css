@@ -3,3 +3,8 @@
   height: 300px;
   width: 300px;
 }
+.square {
+  height: 200px;
+  width:200px;
+  margin: 0 auto;
+}
