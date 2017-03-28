@@ -20,15 +20,14 @@ $('#color').keypress(function(e){
 $('.body').ready(function () {
     var $newDiv = $('<div class="square"/>');
     for (var i = 1; i <= 20; i++) {
-        $newDiv = $('<div class="square" />').text(i);
+        $newDiv = $('<div class="square" />');
         $('body').append($newDiv);
     }
 });
 
-$square = $('.square');
-$('.body').on('click', function(event){
-  // if (event.target == $square)
-  {
-    $(event.target).css("background-color", $color_choice)
+$color_choice = $('#color').val();
+$('.body').on('mouseover', function(event){
+  if ($(event.target).closest('.square').length) {
+    ($(event.target).css("background-color", $color_choice));
   }
 });
